@@ -3,80 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TP3 Front End (IFTS 29) — Dos flujos agénticos simples y visuales para AutoMail AI (Sorteo S10-B · Grupo 31).">
+  <meta name="description" content="TP3 Front End (IFTS 29) — Dos flujos agénticos para AutoMail AI (Sorteo S10-B · Grupo 31 Sintaxia).">
   <title>AutoMail AI · Dos Sentencias, Dos Soluciones | Grupo 31</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip-link" href="#principal">Saltar al contenido</a>
 
-  <!-- Barra superior minimalista -->
   <header class="topbar" id="inicio">
     <div class="container topbar-inner">
-      <div class="brand-chip">
-        <span class="brand-dot" aria-hidden="true"></span>
-        <span><strong>Grupo 31 · Sintaxia</strong> · IFTS 29</span>
-      </div>
+      <a class="brand" href="#startup">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span class="brand-text"><strong>Sintaxia</strong><small>Grupo 31 · IFTS 29</small></span>
+      </a>
 
       <nav class="quick-nav" aria-label="Navegación principal">
-        <a href="#startup" class="nav-item active">La Startup</a>
-        <a href="#solucion-1" class="nav-item">Solución 1 · Spam</a>
-        <a href="#solucion-2" class="nav-item">Solución 2 · Derivación</a>
+        <a href="#startup" class="nav-item active">La startup</a>
+        <a href="#mapa" class="nav-item">Cómo se conectan</a>
+        <a href="#solucion-1" class="nav-item">Solución 1</a>
+        <a href="#solucion-2" class="nav-item">Solución 2</a>
       </nav>
 
-      <span class="sorteo-tag">Sorteo S10-B</span>
+      <span class="sorteo-tag">Sorteo <b>S10-B</b></span>
     </div>
   </header>
 
   <main id="principal">
-    <!-- =========================================================
-         1. PRESENTACIÓN BREVE Y CLARA DE LA STARTUP
-         ========================================================= -->
+    <!-- ===================== 1. PRESENTACIÓN ===================== -->
     <section class="hero" id="startup" aria-labelledby="startup-title">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">TP3 · Dos sentencias. Dos soluciones.</span>
+          <h1 id="startup-title">AutoMail <span>AI</span></h1>
+          <p class="hero-service">
+            Asistente para clasificar correos y responder consultas frecuentes mediante respuestas aprobadas.
+          </p>
+          <p class="hero-need">
+            <strong>El desafío:</strong> filtrar posibles correos spam sin perder mensajes reales y saber frenar a tiempo para derivar a una persona cuando un cliente reclama o necesita atención personalizada.
+          </p>
+
+          <ul class="hero-meta" aria-label="Datos de la asignación">
+            <li><span>Rubro</span>Atención al cliente y correo</li>
+            <li><span>Bloque</span>Correo sospechoso y personalización</li>
+            <li><span>Origen</span>Startup creada en IFTS 16</li>
+          </ul>
+
+          <div class="hero-buttons">
+            <a href="#solucion-1" class="btn btn-mint">Ver Solución 1 <span aria-hidden="true">→</span></a>
+            <a href="#solucion-2" class="btn btn-ghost">Ver Solución 2 <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <figure class="logo-card">
+          <img
+            src="assets/automail-logo.webp"
+            alt="Logo original de AutoMail AI"
+            width="512"
+            height="512"
+            class="hero-logo"
+          >
+          <figcaption>Logo original · Startup del <strong>IFTS 16</strong></figcaption>
+        </figure>
+      </div>
+
       <div class="container">
-        <div class="hero-card">
-          <div class="hero-logo-box">
-            <img
-              src="assets/automail-logo.webp"
-              alt="Logo original de AutoMail AI"
-              width="250"
-              height="250"
-              class="hero-logo"
-            >
-            <span class="origin-caption">Startup creada en <strong>IFTS 16</strong></span>
-          </div>
+        <p class="presented-by">
+          Propuesta presentada por <strong>Grupo 31 · Sintaxia</strong> (IFTS 29) para <strong>AutoMail AI</strong>
+        </p>
+      </div>
+    </section>
 
-          <div class="hero-copy">
-            <span class="kicker">Atención al cliente y correo · Bloque: Correo sospechoso y personalización</span>
-            <h1 id="startup-title">AutoMail AI</h1>
-            <p class="hero-service">
-              Asistente para clasificar correos y responder consultas frecuentes mediante respuestas aprobadas.
-            </p>
-            <p class="hero-need">
-              <strong>El desafío:</strong> filtrar posibles correos spam sin perder mensajes reales y saber frenar a tiempo para derivar a una persona cuando un cliente reclama o necesita atención personalizada.
-            </p>
+    <!-- ===================== MAPA DE LA PROPUESTA ===================== -->
+    <section class="map-section" id="mapa" aria-labelledby="mapa-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Vista general</span>
+          <h2 id="mapa-title">Dos agentes, uno detrás del otro</h2>
+          <p>Cada correo pasa primero por el filtro anti-spam (regla R3). Solo si <strong>no</strong> es sospechoso, sigue al segundo agente (regla R4).</p>
+        </div>
 
-            <div class="hero-buttons">
-              <a href="#solucion-1" class="btn btn-dark">Ir a Solución 1 ↓</a>
-              <a href="#solucion-2" class="btn btn-mint">Ir a Solución 2 ↓</a>
-            </div>
-          </div>
+        <ol class="map-track">
+          <li class="map-step">
+            <span class="map-icon" aria-hidden="true">📩</span>
+            <strong>Llega un correo</strong>
+            <small>Remitente, asunto y cuerpo</small>
+          </li>
+          <li class="map-arrow" aria-hidden="true"></li>
+          <li class="map-step map-flow1">
+            <span class="map-num">01</span>
+            <strong>Filtro Seguro Anti-Spam</strong>
+            <small>Frase 1 · R3 · ¿Es sospechoso?</small>
+            <a href="#solucion-1">Ver flujo ↓</a>
+          </li>
+          <li class="map-arrow map-arrow-label" aria-hidden="true"><span>si NO es sospechoso</span></li>
+          <li class="map-step map-flow2">
+            <span class="map-num">02</span>
+            <strong>Derivador Inteligente a Personas</strong>
+            <small>Frase 2 · R4 · ¿Necesita una persona?</small>
+            <a href="#solucion-2">Ver flujo ↓</a>
+          </li>
+        </ol>
+
+        <div class="legend" aria-label="Cómo leer los diagramas">
+          <span class="legend-title">Cómo leer los diagramas</span>
+          <span class="legend-item"><i class="lg lg-rule"></i>Lo exige la sentencia original</span>
+          <span class="legend-item"><i class="lg lg-group"></i>Decisión de diseño del grupo</span>
+          <span class="legend-item"><i class="lg lg-human"></i>Intervención humana</span>
+          <span class="legend-item"><i class="lg lg-decision"></i>Decisión del agente</span>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================
-         2. SOLUCIÓN 1 · REGLA R3 (CORREO SOSPECHOSO)
-         ========================================================= -->
+    <!-- ===================== 2. SOLUCIÓN 1 · R3 ===================== -->
     <section class="flow-section" id="solucion-1" aria-labelledby="sol1-title">
       <div class="container">
-        <div class="solution-card">
-          <!-- Cabecera corta: Sentencia + Título + 2 frases -->
+        <article class="solution-card">
           <div class="solution-top">
             <div class="solution-intro">
+              <span class="big-num" aria-hidden="true">01</span>
               <span class="step-pill">Propuesta 1 · Frase 1 (R3)</span>
               <h2 id="sol1-title">Filtro Seguro Anti-Spam</h2>
               <p class="benefit-text">
@@ -85,26 +133,24 @@
             </div>
 
             <blockquote class="rule-box">
-              <span>Sentencia original asignada</span>
-              «Si un correo se marca como sospechoso de spam, el sistema lo separa para revisión sin borrarlo ni responderlo automáticamente.»
+              <span class="rule-label">Sentencia original asignada · R3</span>
+              <p>«Si un correo se marca como sospechoso de spam, el sistema lo separa para revisión sin borrarlo ni responderlo automáticamente.»</p>
             </blockquote>
           </div>
 
-          <!-- Botones simples para iluminar SÍ o NO -->
           <div class="sim-bar" role="region" aria-label="Probar caminos del Flujo 1">
-            <span class="sim-label">Probá el recorrido:</span>
+            <span class="sim-label"><span aria-hidden="true">▶</span> Probá el recorrido</span>
             <div class="sim-buttons" data-target="flow-1">
               <button type="button" class="sim-btn active" data-mode="all" aria-pressed="true">Ver todo</button>
-              <button type="button" class="sim-btn" data-mode="yes" aria-pressed="false">Caso SÍ (Es sospechoso)</button>
-              <button type="button" class="sim-btn" data-mode="no" aria-pressed="false">Caso NO (Es seguro)</button>
+              <button type="button" class="sim-btn btn-yes" data-mode="yes" aria-pressed="false">Caso SÍ · Es sospechoso</button>
+              <button type="button" class="sim-btn btn-no" data-mode="no" aria-pressed="false">Caso NO · Es seguro</button>
             </div>
           </div>
 
-          <!-- DIAGRAMA 1: Visual, limpio y fácil de leer de un vistazo -->
-          <div class="visual-flow" id="flow-1" data-mode="all" role="img" aria-label="Diagrama de flujo de la Solución 1: entra un correo, el agente consulta el filtro antispam y decide si es sospechoso.">
-            <!-- Paso 1 y 2 -->
+          <div class="visual-flow" id="flow-1" data-mode="all" role="img" aria-label="Diagrama de flujo de la Solución 1: llega un correo, el agente consulta el detector antispam y decide si está marcado como sospechoso. Si lo está, lo separa a Revisión sin borrarlo ni responderlo y una persona lo revisa. Si no lo está, decisión del grupo: pasa al Flujo 2.">
             <div class="flow-center-stack">
               <div class="v-node v-start">
+                <span class="v-num">1</span>
                 <span class="v-icon" aria-hidden="true">📩</span>
                 <div>
                   <small>Inicio</small>
@@ -115,9 +161,10 @@
               <div class="v-line" aria-hidden="true"></div>
 
               <div class="v-node v-agent">
+                <span class="v-num">2</span>
                 <span class="v-icon" aria-hidden="true">🛡️</span>
                 <div>
-                  <small>Agente + Herramienta: Detector Antispam</small>
+                  <small>Agente + herramienta: Detector Antispam</small>
                   <strong>Revisa remitente y marca de spam</strong>
                 </div>
               </div>
@@ -125,101 +172,95 @@
               <div class="v-line" aria-hidden="true"></div>
 
               <div class="v-node v-question">
+                <span class="v-diamond" aria-hidden="true">?</span>
                 <small>Decisión</small>
                 <strong>¿Está marcado como sospechoso de spam?</strong>
               </div>
             </div>
 
-            <!-- Conector limpio a 2 caminos (SÍ / NO) -->
             <div class="v-split" aria-hidden="true">
               <div class="v-split-stem"></div>
               <div class="v-split-bar"></div>
             </div>
 
             <div class="v-branches">
-              <!-- Camino SÍ -->
               <div class="v-branch branch-yes">
                 <span class="v-badge badge-yes">SÍ · Es sospechoso</span>
-
                 <div class="v-card card-yes">
+                  <span class="card-tag tag-rule">Lo exige la regla R3</span>
                   <div class="v-step-item">
                     <span class="v-mini-icon" aria-hidden="true">📁</span>
                     <p><strong>Lo separa a «Revisión»</strong> sin borrarlo y bloquea toda respuesta automática.</p>
                   </div>
-                  <div class="v-step-arrow" aria-hidden="true">↓</div>
+                  <div class="v-step-arrow" aria-hidden="true"></div>
                   <div class="v-step-item item-human">
                     <span class="v-mini-icon" aria-hidden="true">👤</span>
                     <p><strong>Revisión humana:</strong> una persona mira la bandeja para rescatar posibles correos reales.</p>
                   </div>
                   <div class="v-result">
-                    Resultado: Correo aislado e intacto, sin respuesta enviada.
+                    <span aria-hidden="true">🏁</span> Correo aislado e intacto, sin respuesta enviada.
                   </div>
                 </div>
               </div>
 
-              <!-- Camino NO -->
               <div class="v-branch branch-no">
                 <span class="v-badge badge-no">NO · No es sospechoso</span>
-
                 <div class="v-card card-no">
-                  <span class="group-note">Decisión de diseño del grupo</span>
+                  <span class="card-tag tag-group">Decisión de diseño del grupo</span>
                   <div class="v-step-item">
                     <span class="v-mini-icon" aria-hidden="true">✅</span>
                     <p><strong>Lo marca como correo seguro</strong> (todavía no responde automáticamente).</p>
                   </div>
-                  <div class="v-step-arrow" aria-hidden="true">↓</div>
+                  <div class="v-step-arrow" aria-hidden="true"></div>
                   <div class="v-step-item">
                     <span class="v-mini-icon" aria-hidden="true">➡️</span>
                     <p><strong>Continúa el análisis:</strong> pasa el correo a la Solución 2 para leer qué necesita el cliente.</p>
                   </div>
                   <div class="v-result result-alt">
-                    Resultado: Pasa seguro al Flujo 2 (Regla R4).
+                    <span aria-hidden="true">🏁</span> Pasa seguro al Flujo 2 (regla R4).
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Desplegable con todos los detalles sin recargar la vista -->
           <details class="more-details">
             <summary>
-              <span>Ver detalles, herramientas, excepciones y ejemplos de esta solución</span>
+              <span class="summary-text"><span class="summary-icon" aria-hidden="true">🔍</span>Ver detalles, herramientas, excepciones y ejemplos de esta solución</span>
               <span class="plus-icon" aria-hidden="true">+</span>
             </summary>
             <div class="details-body">
               <div class="details-grid">
-                <div>
-                  <h4>Datos de entrada y herramientas</h4>
+                <div class="detail-box">
+                  <h3>Datos de entrada y herramientas</h3>
                   <ul>
                     <li><strong>Qué entra:</strong> remitente, asunto, cuerpo y etiqueta del filtro antispam del servidor.</li>
                     <li><strong>Herramientas del agente:</strong> Detector Antispam (lectura) y Gestor de carpetas del correo.</li>
                     <li><strong>Qué viene de la regla vs. grupo:</strong> la regla R3 exige separar sin borrar ni responder; el grupo define la auditoría humana de esa carpeta y el pase al Flujo 2 cuando no es spam.</li>
                   </ul>
                 </div>
-                <div>
-                  <h4>Excepción y casos de prueba</h4>
+                <div class="detail-box">
+                  <h3>Excepción y casos de prueba</h3>
                   <ul>
-                    <li><strong>Caso límite (fallo técnico):</strong> si el detector antispam falla o tarda, por seguridad tampoco borra ni responde y avisa a una persona.</li>
-                    <li><strong>Ejemplo que SÍ cumple:</strong> mail con link falso de premio → va a <em>Revisión</em> sin borrarse ni contestarse.</li>
-                    <li><strong>Ejemplo que NO cumple:</strong> mail legítimo preguntando medios de pago → pasa verificado a la Solución 2.</li>
+                    <li class="li-edge"><strong>Caso límite (fallo técnico):</strong> si el detector antispam falla o tarda, por seguridad tampoco borra ni responde y avisa a una persona.</li>
+                    <li class="li-yes"><strong>Ejemplo que SÍ cumple:</strong> mail con link falso de premio → va a <em>Revisión</em> sin borrarse ni contestarse.</li>
+                    <li class="li-no"><strong>Ejemplo que NO cumple:</strong> mail legítimo preguntando medios de pago → pasa verificado a la Solución 2.</li>
                   </ul>
                 </div>
               </div>
             </div>
           </details>
-        </div>
+        </article>
       </div>
     </section>
 
-    <!-- =========================================================
-         3. SOLUCIÓN 2 · REGLA R4 (DERIVACIÓN A PERSONA)
-         ========================================================= -->
-    <section class="flow-section section-soft" id="solucion-2" aria-labelledby="sol2-title">
+    <!-- ===================== 3. SOLUCIÓN 2 · R4 ===================== -->
+    <section class="flow-section" id="solucion-2" aria-labelledby="sol2-title">
       <div class="container">
-        <div class="solution-card">
-          <!-- Cabecera corta -->
+        <article class="solution-card">
           <div class="solution-top">
             <div class="solution-intro">
+              <span class="big-num" aria-hidden="true">02</span>
               <span class="step-pill">Propuesta 2 · Frase 2 (R4)</span>
               <h2 id="sol2-title">Derivador Inteligente a Personas</h2>
               <p class="benefit-text">
@@ -228,28 +269,27 @@
             </div>
 
             <blockquote class="rule-box">
-              <span>Sentencia original asignada</span>
-              «Si un correo no es sospechoso y además requiere personalización, contiene un reclamo, carece de respuesta aprobada o resulta ambiguo, el sistema lo deriva a una persona sin responder automáticamente.»
+              <span class="rule-label">Sentencia original asignada · R4</span>
+              <p>«Si un correo no es sospechoso y además requiere personalización, contiene un reclamo, carece de respuesta aprobada o resulta ambiguo, el sistema lo deriva a una persona sin responder automáticamente.»</p>
             </blockquote>
           </div>
 
-          <!-- Botones simples para iluminar SÍ o NO -->
           <div class="sim-bar" role="region" aria-label="Probar caminos del Flujo 2">
-            <span class="sim-label">Probá el recorrido:</span>
+            <span class="sim-label"><span aria-hidden="true">▶</span> Probá el recorrido</span>
             <div class="sim-buttons" data-target="flow-2">
               <button type="button" class="sim-btn active" data-mode="all" aria-pressed="true">Ver todo</button>
-              <button type="button" class="sim-btn" data-mode="yes" aria-pressed="false">Caso SÍ (Deriva a persona)</button>
-              <button type="button" class="sim-btn" data-mode="no" aria-pressed="false">Caso NO (Consulta frecuente)</button>
+              <button type="button" class="sim-btn btn-yes" data-mode="yes" aria-pressed="false">Caso SÍ · Deriva a persona</button>
+              <button type="button" class="sim-btn btn-no" data-mode="no" aria-pressed="false">Caso NO · Consulta frecuente</button>
             </div>
           </div>
 
-          <!-- DIAGRAMA 2: Visual, limpio y directo -->
-          <div class="visual-flow" id="flow-2" data-mode="all" role="img" aria-label="Diagrama de flujo de la Solución 2: en correos no sospechosos, evalúa si requiere personalización, reclamo, falta respuesta aprobada o es ambiguo.">
+          <div class="visual-flow" id="flow-2" data-mode="all" role="img" aria-label="Diagrama de flujo de la Solución 2: un correo no sospechoso llega desde el Flujo 1; el agente consulta el catálogo de respuestas aprobadas y evalúa si requiere personalización, contiene un reclamo, carece de respuesta aprobada o es ambiguo. Si ocurre al menos una, no responde automáticamente y lo deriva a una persona. Si no ocurre ninguna, decisión del grupo: puede seguir al circuito de respuesta aprobada.">
             <div class="flow-center-stack">
               <div class="v-node v-start">
+                <span class="v-num">1</span>
                 <span class="v-icon" aria-hidden="true">✉️</span>
                 <div>
-                  <small>Inicio (viene validado del Flujo 1)</small>
+                  <small>Inicio (viene del Flujo 1)</small>
                   <strong>Correo confirmado como «No sospechoso»</strong>
                 </div>
               </div>
@@ -257,9 +297,10 @@
               <div class="v-line" aria-hidden="true"></div>
 
               <div class="v-node v-agent">
+                <span class="v-num">2</span>
                 <span class="v-icon" aria-hidden="true">🔎</span>
                 <div>
-                  <small>Agente + Herramienta: Catálogo de Respuestas Aprobadas</small>
+                  <small>Agente + herramienta: Catálogo de Respuestas Aprobadas</small>
                   <strong>Analiza el pedido, el tono y busca si hay plantilla oficial</strong>
                 </div>
               </div>
@@ -267,7 +308,8 @@
               <div class="v-line" aria-hidden="true"></div>
 
               <div class="v-node v-question v-question-wide">
-                <small>Decisión (basta con que ocurra AL MENOS UNA)</small>
+                <span class="v-diamond" aria-hidden="true">?</span>
+                <small>Decisión · basta con que ocurra al menos una</small>
                 <strong>¿Pasa alguna de estas 4 situaciones?</strong>
                 <div class="alert-chips">
                   <span>🎯 Pide personalización</span>
@@ -278,92 +320,95 @@
               </div>
             </div>
 
-            <!-- Conector limpio a 2 caminos -->
             <div class="v-split" aria-hidden="true">
               <div class="v-split-stem"></div>
               <div class="v-split-bar"></div>
             </div>
 
             <div class="v-branches">
-              <!-- Camino SÍ -->
               <div class="v-branch branch-yes">
                 <span class="v-badge badge-yes">SÍ · Cumple 1 o más</span>
-
                 <div class="v-card card-yes">
+                  <span class="card-tag tag-rule">Lo exige la regla R4</span>
                   <div class="v-step-item">
                     <span class="v-mini-icon" aria-hidden="true">🛑</span>
                     <p><strong>No responde automáticamente</strong> y anota cuál fue el motivo detectado.</p>
                   </div>
-                  <div class="v-step-arrow" aria-hidden="true">↓</div>
+                  <div class="v-step-arrow" aria-hidden="true"></div>
                   <div class="v-step-item item-human">
                     <span class="v-mini-icon" aria-hidden="true">👩‍💻</span>
                     <p><strong>Intervención humana:</strong> deriva el correo a una persona del equipo para contestar a medida.</p>
                   </div>
                   <div class="v-result">
-                    Resultado: Atendido por una persona, sin respuesta automática previa.
+                    <span aria-hidden="true">🏁</span> Atendido por una persona, sin respuesta automática previa.
                   </div>
                 </div>
               </div>
 
-              <!-- Camino NO -->
               <div class="v-branch branch-no">
                 <span class="v-badge badge-no">NO · Ninguna de las 4</span>
-
                 <div class="v-card card-no">
-                  <span class="group-note">Decisión de diseño del grupo</span>
+                  <span class="card-tag tag-group">Decisión de diseño del grupo</span>
                   <div class="v-step-item">
                     <span class="v-mini-icon" aria-hidden="true">📋</span>
                     <p><strong>Es una consulta frecuente simple:</strong> clara, sin quejas y con respuesta aprobada vigente.</p>
                   </div>
-                  <div class="v-step-arrow" aria-hidden="true">↓</div>
+                  <div class="v-step-arrow" aria-hidden="true"></div>
                   <div class="v-step-item">
                     <span class="v-mini-icon" aria-hidden="true">✨</span>
-                    <p><strong>Usa plantilla oficial:</strong> envía la respuesta aprobada de AutoMail AI y registra el envío.</p>
+                    <p><strong>Pasa al circuito de respuesta aprobada:</strong> se envía la plantilla oficial solo si también se cumplen las demás reglas de AutoMail AI.</p>
                   </div>
                   <div class="v-result result-alt">
-                    Resultado: Consulta frecuente respondida con texto aprobado.
+                    <span aria-hidden="true">🏁</span> Consulta frecuente lista para respuesta aprobada.
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Desplegable con detalles técnicos, caso límite y ejemplos -->
           <details class="more-details">
             <summary>
-              <span>Ver detalles, herramientas, excepciones y ejemplos de esta solución</span>
+              <span class="summary-text"><span class="summary-icon" aria-hidden="true">🔍</span>Ver detalles, herramientas, excepciones y ejemplos de esta solución</span>
               <span class="plus-icon" aria-hidden="true">+</span>
             </summary>
             <div class="details-body">
               <div class="details-grid">
-                <div>
-                  <h4>Datos de entrada y herramientas</h4>
+                <div class="detail-box">
+                  <h3>Datos de entrada y herramientas</h3>
                   <ul>
                     <li><strong>Qué entra:</strong> correo validado como no sospechoso, texto del cliente y base de Respuestas Aprobadas.</li>
                     <li><strong>Herramientas del agente:</strong> Clasificador de intención, Catálogo de FAQs oficiales y sistema de tickets para personas.</li>
                     <li><strong>Conexión lógica:</strong> respeta el «y además» (no ser sospechoso) junto con el «o» entre las 4 alertas.</li>
+                    <li><strong>Qué viene de la regla vs. grupo:</strong> la regla R4 exige derivar sin responder; el camino «NO» no está definido por la regla y es una decisión del grupo.</li>
                   </ul>
                 </div>
-                <div>
-                  <h4>Excepción y casos de prueba</h4>
+                <div class="detail-box">
+                  <h3>Excepción y casos de prueba</h3>
                   <ul>
-                    <li><strong>Caso límite (mail mixto):</strong> si pregunta el horario (tiene plantilla) pero en el mismo mail reclama un pedido demorado, gana la precaución: no manda plantilla parcial y deriva todo a una persona.</li>
-                    <li><strong>Ejemplo que SÍ cumple:</strong> «Me cobraron dos veces la factura #9042» → sin respuesta automática, pasa a soporte humano.</li>
-                    <li><strong>Ejemplo que NO cumple:</strong> «¿Qué días abren la sucursal Centro?» → recibe la respuesta aprobada oficial.</li>
+                    <li class="li-edge"><strong>Caso límite (mail mixto):</strong> si pregunta el horario (tiene plantilla) pero en el mismo mail reclama un pedido demorado, gana la precaución: no manda plantilla parcial y deriva todo a una persona.</li>
+                    <li class="li-yes"><strong>Ejemplo que SÍ cumple:</strong> «Me cobraron dos veces la factura #9042» → sin respuesta automática, pasa a soporte humano.</li>
+                    <li class="li-no"><strong>Ejemplo que NO cumple:</strong> «¿Qué días abren la sucursal Centro?» → pasa al circuito de respuesta aprobada.</li>
                   </ul>
                 </div>
               </div>
             </div>
           </details>
-        </div>
+        </article>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer-row">
-      <p><strong>TP3 · Dos sentencias. Dos soluciones.</strong> — AutoMail AI (Sorteo S10-B · construcción 100% agéntica)</p>
-      <p>Startup: <strong>IFTS 16</strong> · Propuesta Front End: <strong>Grupo 31 (Sintaxia) · IFTS 29</strong> · <a href="#inicio">Volver arriba ↑</a></p>
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-title">TP3 · Dos sentencias. Dos soluciones.</p>
+        <p>AutoMail AI · Sorteo S10-B · Construcción 100% agéntica</p>
+      </div>
+      <div class="footer-ids">
+        <span><small>Startup</small>AutoMail AI · IFTS 16</span>
+        <span><small>Propuesta</small>Grupo 31 · Sintaxia · IFTS 29</span>
+      </div>
+      <a class="footer-top" href="#inicio">Volver arriba ↑</a>
     </div>
   </footer>
 

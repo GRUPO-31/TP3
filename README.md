@@ -1,116 +1,154 @@
 # TP3 · Dos sentencias. Dos soluciones — AutoMail AI (Sorteo S10-B)
 
-**Institución:** IFTS N.º 29 — Desarrollo de Sistemas Web (Front End · 2.º Cuatrimestre 2026)  
-**Grupo:** Grupo 31 · **Sintaxia**  
-**Startup asignada por sorteo:** **AutoMail AI** (`S10-B`, creada por estudiantes del **IFTS N.º 16**)  
-**Bloque asignado:** Correo sospechoso y personalización (`Frase 1 · R3` y `Frase 2 · R4`)  
-**Modalidad de desarrollo:** Construcción **100% agéntica** (HTML5, CSS3 y JavaScript puro sin edición manual de código).
+**Institución:** IFTS N.º 29 — Desarrollo de Sistemas Web · Front End · 2.º cuatrimestre 2026
+**Grupo:** Grupo 31 · **Sintaxia**
+**Startup asignada por sorteo:** **AutoMail AI** (creada por estudiantes del **IFTS N.º 16**)
+**Bloque asignado:** `S10-B` · Correo sospechoso y personalización (`Frase 1 · R3` y `Frase 2 · R4`)
+**Tecnología:** HTML, CSS y JavaScript sin frameworks ni dependencias
+**Construcción:** 100% agéntica (ningún archivo fue editado manualmente)
 
 ---
 
-## 1. Enlaces de entrega y verificación pública
+## 1. Enlaces de entrega
 
-- **Repositorio público del grupo:** [https://github.com/GRUPO-31/TP3](https://github.com/GRUPO-31/TP3)
-- **Landing page publicada (Vercel / GitHub Pages):** *(Agregar enlace una vez conectada la rama `main` en Vercel o GitHub Pages)*
+| | Enlace |
+| :--- | :--- |
+| **Repositorio** | https://github.com/GRUPO-31/TP3 |
+| **Landing publicada** | https://grupo-31.github.io/TP3/ |
 
-### Comprobación sin sesión activa (ventana privada / incógnito)
-- [x] El repositorio abre públicamente sin requerir inicio de sesión.
-- [x] La landing carga el logo original completo de **AutoMail AI** (`assets/automail-logo.webp`), las dos sentencias textuales (`R3` y `R4`), los dos diagramas de flujo agéntico y los desplegables.
-- [x] Los desplegables (`<details>`) abren y cierran tanto con clic como con teclado (`Tab` + `Enter` o `Espacio`).
-- [x] La lectura en escritorio (`1280px` / `1366px` / `1440px` / `1920px`) no presenta recortes ni desbordes horizontales.
+> La landing se publica con **GitHub Pages** (Settings → Pages → Branch `main` / carpeta `/ (root)`).
+
+### Comprobación de enlaces sin sesión (ventana de incógnito)
+- [ ] El repositorio abre sin iniciar sesión.
+- [ ] La landing abre sin iniciar sesión y muestra la versión final (logo de AutoMail AI, dos sentencias, dos diagramas y dos desplegables).
+
+*Marcar estas casillas recién después de abrir ambos enlaces en una ventana privada.*
 
 ---
 
-## 2. Integrantes del grupo (Sintaxia · Grupo 31), roles y revisión colaborativa
+## 2. Integrantes, roles y aportes
 
-| Integrante | Perfil de GitHub | Rol principal en el TP3 | Aporte concreto realizado |
+| Integrante | GitHub | Rol en el TP3 | Aporte concreto |
 | :--- | :--- | :--- | :--- |
-| **Brian Lavandera** | [@brianlavandera3](https://github.com/brianlavandera3) | Coordinación de instrucciones al agente e iteración visual | Encargo integral a Antigravity con el sorteo `S10-B`, pedidos de rediseño y simplificación de lectura en pantalla y publicación en el repositorio del grupo. |
-| **Diego Rodriguez** | [@diegojrodriguez](https://github.com/diegojrodriguez) | Análisis lógico de sentencias y estructura de flujos | Verificación de conectores lógicos de `R3` y `R4` (`y además` / `o` / negaciones) y coherencia entre las reglas del IFTS 16 y los dos recorridos propuestos. |
-| **Sergio Vargas** | [@SergioVargas101](https://github.com/SergioVargas101) | Validación de casos límite y excepciones | Revisión de escenarios borde (fallo técnico del verificador antispam en `R3` y correos mixtos con consulta frecuente + reclamo en `R4`) e intervención humana. |
-| **Cristian Villagra** | [@Crrisst](https://github.com/Crrisst) | Pruebas en escritorio, accesibilidad y despliegue | Comprobación visual del logo original sin recortes, navegación por clic y teclado en los desplegables y verificación de enlaces públicos sin sesión. |
+| **Brian Lavandera** | [@brianlavandera3](https://github.com/brianlavandera3) | Coordinación de instrucciones al agente | Entregó al agente la consigna y el sorteo `S10-B`, pidió las iteraciones de simplificación visual y subió el proyecto al repositorio del grupo. |
+| **Diego Rodriguez** | [@diegojrodriguez](https://github.com/diegojrodriguez) | Análisis lógico de las sentencias | Revisó los conectores de `R3` y `R4` («y además», «o», negaciones) y que cada diagrama respete su regla. |
+| **Sergio Vargas** | [@SergioVargas101](https://github.com/SergioVargas101) | Casos límite y excepciones | Propuso los casos límite: falla del detector antispam (`R3`) y correo mixto con consulta frecuente + reclamo (`R4`). |
+| **Cristian Villagra** | [@Crrisst](https://github.com/Crrisst) | Pruebas en desktop y publicación | Probó el logo, los diagramas y los desplegables con clic y teclado, y verificó los enlaces públicos. |
 
-### Registro de revisión entre integrantes y mejora aplicada (Nivel *Propone*)
-Durante la revisión cruzada del equipo sobre el primer planteo de los flujos, detectamos dos puntos críticos que mejoraron la entrega final:
-1. **Comprensión del alcance de ambas reglas:** inicialmente surgió la duda de si debía elegirse una sola frase del sorteo, pero al contrastar la consigna y la rúbrica (*«Dos sentencias. Dos soluciones»* y punto de control del bloque `S10-B`), confirmamos que debían resolverse **ambas sentencias (`R3` y `R4`)** y que además estaban encadenadas lógicamente (`R3` filtra `p` = correo sospechoso, y `R4` parte de `¬p` = correo no sospechoso).
-2. **Distinción entre regla original y decisión del grupo:** al revisar qué ocurría cuando la condición daba `NO` en cada diagrama, acordamos pedirle al agente que diferenciara visualmente con etiquetas (`Regla original R3/R4` vs. `Decisión del Grupo 31`) los caminos no regulados por las frases originales, evitando caer en la falacia de negar el antecedente y sumando además un **probador visual de recorrido** para exponer cada caso con claridad en clase.
+### Revisión entre integrantes y mejora surgida
+1. **Alcance de las reglas:** al principio hubo dudas sobre si había que resolver una sola frase. Al releer la consigna confirmamos que eran **las dos** y que están encadenadas: `R3` trata el correo sospechoso (`p`) y `R4` parte del correo no sospechoso (`¬p`). Por eso el Flujo 1 pasa al Flujo 2 cuando el correo no es sospechoso.
+2. **Regla original vs. decisión del grupo:** al revisar los caminos `NO` notamos que las sentencias no dicen qué hacer en ese caso. Le pedimos al agente que los marcara con la etiqueta **«Decisión de diseño del grupo»**, para no presentar como obligatorio algo que la regla no establece.
 
 ---
 
-## 3. Startup asignada y fichas de desarme lógico
+## 3. Startup asignada
 
-- **Nombre:** AutoMail AI (origen: estudiantes del **IFTS N.º 16**)
+- **Nombre:** AutoMail AI
+- **Origen:** estudiantes del IFTS N.º 16
 - **Rubro:** Atención al cliente y correo
-- **Objetivo:** Asistente para clasificar correos y responder consultas frecuentes mediante respuestas aprobadas.
-- **Bloque:** Correo sospechoso y personalización (`S10-B`)
-
-### Ficha 1 — Sentencia R3
-- **Sentencia original:** *«Si un correo se marca como sospechoso de spam, el sistema lo separa para revisión sin borrarlo ni responderlo automáticamente.»*
-- **Datos necesarios:** Correo entrante (remitente, cabeceras `SPF/DKIM/DMARC`, asunto, cuerpo) + marca del filtro antispam.
-- **Condición:** `p`: el correo está marcado como sospechoso de spam.
-- **Consecuencia obligatoria:** Separar en bandeja de revisión (`q`) **Y** no borrar (`¬r`) **Y** no enviar respuesta automática (`¬s`).
-- **Propuesta 1 — Guardián de Cuarentena Preventiva:** Un agente inicial consulta el motor antispam; si `p` es verdadero, aísla el mensaje intacto y bloquea respuestas para que un operador humano audite falsos positivos. Si `p` es falso (`¬p`, decisión del grupo), lo transfiere al Flujo 2. Si el motor falla por timeout (caso límite), aplica retención segura y pide revisión humana.
-
-### Ficha 2 — Sentencia R4
-- **Sentencia original:** *«Si un correo no es sospechoso y además requiere personalización, contiene un reclamo, carece de respuesta aprobada o resulta ambiguo, el sistema lo deriva a una persona sin responder automáticamente.»*
-- **Datos necesarios:** Estado verificado `¬p` (no sospechoso), contenido del mensaje, contexto básico de cuenta/pedido y Catálogo de Respuestas Aprobadas.
-- **Condición compuesta:** `¬p ∧ (a ∨ b ∨ c ∨ d)` — correo no sospechoso **y además** al menos una de cuatro alertas: requiere personalización (`a`) **o** contiene reclamo (`b`) **o** carece de respuesta aprobada (`c`) **o** resulta ambiguo (`d`).
-- **Consecuencia obligatoria:** Derivar a una persona (`h`) **Y** no responder automáticamente (`¬s`).
-- **Propuesta 2 — Enrutador Sensible de Casos Complejos:** Si se activa cualquiera de las cuatro alertas en la disyunción, frena la autorrespuesta y crea un ticket para un especialista humano indicando qué motivo exacto disparó la derivación (incluso en el caso límite de correos mixtos con consulta frecuente + queja). Solo cuando ninguna alerta se activa (decisión de diseño del grupo alineada con AutoMail AI), habilita la respuesta aprobada correspondiente.
+- **Objetivo:** asistente para clasificar correos y responder consultas frecuentes mediante respuestas aprobadas.
+- **Logo:** original del material asignado, en `assets/automail-logo.webp`.
 
 ---
 
-## 4. Herramientas de IA, aplicación, modelo y evidencia de iteración
+## 4. Fichas de las sentencias y propuestas
 
-### Declaración de entorno y modelo utilizado
-| Categoría | Detalle registrado | Uso concreto en el proyecto |
+### Ficha 1 — Frase 1 · R3
+| | |
+| :--- | :--- |
+| **Sentencia original** | «Si un correo se marca como sospechoso de spam, el sistema lo separa para revisión sin borrarlo ni responderlo automáticamente.» |
+| **Datos necesarios** | Correo entrante (remitente, asunto, cuerpo) y la marca del filtro antispam. |
+| **Condición** | El correo está marcado como sospechoso de spam. |
+| **Consecuencia** | Separarlo para revisión, **sin** borrarlo **y sin** responderlo automáticamente. |
+
+**Propuesta 1 — Filtro Seguro Anti-Spam.** Un agente consulta el detector antispam antes de contestar nada. Si el correo está marcado como sospechoso, lo mueve intacto a «Revisión» y bloquea cualquier respuesta automática. Así se evita responder a remitentes peligrosos y no se pierde ningún correo real por un falso positivo.
+
+- **Viene de la regla:** separar, no borrar, no responder.
+- **Agrega el grupo:** una persona revisa esa bandeja para rescatar correos legítimos; si el correo **no** es sospechoso, pasa al Flujo 2.
+- **Caso límite:** si el detector falla o no responde a tiempo, por precaución tampoco borra ni responde, y avisa a una persona.
+- **Prueba:** «Ganaste un premio, hacé clic acá» (marcado) → va a Revisión intacto. «¿Qué medios de pago aceptan?» (no marcado) → pasa al Flujo 2.
+
+### Ficha 2 — Frase 2 · R4
+| | |
+| :--- | :--- |
+| **Sentencia original** | «Si un correo no es sospechoso y además requiere personalización, contiene un reclamo, carece de respuesta aprobada o resulta ambiguo, el sistema lo deriva a una persona sin responder automáticamente.» |
+| **Datos necesarios** | Resultado del Flujo 1 (no sospechoso), texto del correo y catálogo de respuestas aprobadas. |
+| **Condición** | No sospechoso **Y** (requiere personalización **O** contiene reclamo **O** carece de respuesta aprobada **O** es ambiguo). Basta con una de las cuatro alertas. |
+| **Consecuencia** | Derivar a una persona **sin** responder automáticamente. |
+
+**Propuesta 2 — Derivador Inteligente a Personas.** Un segundo agente lee el correo ya validado y busca si existe una respuesta aprobada. Si detecta un reclamo, un pedido personal, falta de plantilla o un mensaje confuso, frena el envío automático, anota el motivo y lo deriva a una persona. El cliente recibe una respuesta humana justo cuando la necesita.
+
+- **Viene de la regla:** derivar a una persona y no responder automáticamente cuando se da al menos una alerta.
+- **Agrega el grupo:** registrar qué alerta disparó la derivación; si no se da ninguna alerta, el correo puede seguir al circuito de respuesta aprobada. La regla `R4` no define ese camino: es una decisión de diseño, y en AutoMail AI el envío automático depende además de otras reglas del sistema que no forman parte de este bloque.
+- **Caso límite:** correo mixto que pregunta el horario (tiene plantilla) y además reclama un pedido demorado → no envía una respuesta parcial y deriva todo a una persona.
+- **Prueba:** «Me cobraron dos veces la factura #9042» (reclamo) → derivado a una persona. «¿Qué días abre la sucursal Centro?» (ninguna alerta) → camino de respuesta aprobada.
+
+---
+
+## 5. Herramientas de IA: aplicaciones y modelos
+
+| Aplicación (entorno) | Modelo (como figura en la aplicación) | Para qué se usó | Cambios solicitados |
+| :--- | :--- | :--- | :--- |
+| **Google Antigravity** | Gemini 4 Argon (Medium) | Generar `index.html`, `styles.css`, `script.js` y el primer README; maquetar los dos diagramas; accesibilidad con teclado. | Incluir las dos sentencias, el logo original, las etiquetas «Decisión de diseño del grupo», reducir texto y mover los detalles a desplegables. |
+| **Claude Code** (app de escritorio) | Claude Opus 5.5 | Revisar la entrega contra la consigna y la rúbrica, probar la landing en el navegador, rediseñar el aspecto visual (`index.html` y `styles.css`) y reescribir este README. | Hacer la página más atractiva, agregar la sección «Cómo se conectan» con leyenda de colores, ajustar el camino «NO» del Flujo 2, unificar títulos y agregar el registro de pruebas. |
+
+La landing es estática: **no** integra IA, no ejecuta agentes, no se conecta a APIs ni tiene backend. Los flujos solo se explican y se dibujan.
+
+### Evidencia de iteración
+1. **Instrucción inicial:** se le entregó a Antigravity la consigna del TP3 y los datos del sorteo `S10-B` (AutoMail AI, `R3` y `R4`), y se le pidió una landing clara para desktop.
+2. **Problema detectado:** la primera versión tenía bloques repetidos, fórmulas lógicas a la vista y demasiado texto; costaba entender cada flujo de un vistazo.
+3. **Pedido de mejora:** reducir el texto de la vista principal y lograr que cada flujo se entienda en segundos.
+4. **Qué cambió y por qué:** la página quedó en tres bloques (startup, Solución 1, Solución 2); cada diagrama tiene pocos pasos y se bifurca en **SÍ / NO**; las herramientas, excepciones y ejemplos pasaron a los desplegables. Así lo principal se lee rápido y los detalles quedan a un clic, como pide la consigna.
+5. **Revisión con Claude Code — lógica:** el camino «NO» del Flujo 2 mostraba que se enviaba la respuesta automática, pero la regla R4 no dice eso y AutoMail AI exige otras condiciones para responder sola. Se cambió a «pasa al circuito de respuesta aprobada», aclarando que es una decisión del grupo.
+6. **Revisión con Claude Code — diseño:** pedimos que la página fuera más linda. Cambió a un hero oscuro con la paleta del logo (azul marino y verde menta), se agregó la sección **«Cómo se conectan»** que muestra que el Flujo 1 alimenta al Flujo 2, y una **leyenda** de colores. En los diagramas, lo que exige la regla tiene borde verde continuo y lo que agrega el grupo tiene borde azul **punteado**, así se distingue a simple vista. Los botones SÍ/NO también colorean el conector del camino elegido.
+7. **Revisión final:** se detectó que los títulos de las propuestas en el README no coincidían con los de la landing y que faltaba publicar el sitio; se corrigió el README y se agregó el registro de pruebas.
+
+---
+
+## 6. Pruebas realizadas en desktop
+
+Probado en Chromium con servidor local, a **1280×720**, **1366×768** y **1920×1080**:
+
+| Prueba | Resultado |
+| :--- | :--- |
+| Sin scroll horizontal ni desbordes | ✅ |
+| Logo de AutoMail AI completo y legible | ✅ |
+| Barra de navegación lleva a cada sección y marca la activa | ✅ |
+| Botones «Ver todo / Caso SÍ / Caso NO» resaltan el camino en ambos diagramas | ✅ |
+| Desplegables abren y cierran con clic | ✅ |
+| Desplegables abren con teclado (`Tab` + `Enter`) | ✅ |
+| Consola del navegador sin errores | ✅ |
+
+### Recorridos de cada flujo
+| Flujo | Caso que cumple la condición | Caso que no la cumple |
 | :--- | :--- | :--- |
-| **Aplicación (entorno agéntico)** | **Google Antigravity** | Generación integral de archivos (`index.html`, `styles.css`, `script.js`, `README.md`), recuperación del logo oficial `S10.webp` desde la portada de la cátedra y pruebas de renderizado en navegador desktop. |
-| **Modelo seleccionado** | **Gemini 4 Argon (Medium)** *(nombre informado en el selector de modelos de Antigravity)* | Análisis lógico de las sentencias `R3` y `R4`, arquitectura semántica HTML, maquetación de los dos diagramas de flujo agéntico, accesibilidad por teclado y redacción técnica. |
-
-*(Construcción 100% agéntica: ningún archivo de código fue editado manualmente; la página final es estática y no ejecuta IA ni consume APIs externas).*
-
-### Evidencia de iteración agéntica (Nivel *Propone*)
-1. **Instrucción inicial:** se entregó al agente la consigna completa del TP3 junto con los datos del sorteo `S10-B` (**AutoMail AI**, frases `R3` y `R4`) solicitando resolver el trabajo práctico completo en una landing clara para escritorio.
-2. **Primera revisión — Fidelidad lógica y alcance:**
-   - Se verificó la inclusión obligatoria de **ambas sentencias (`R3` y `R4`)** y la descarga del logo original oficial (`S10.webp`) desde la portada de la cátedra.
-   - Se agregaron etiquetas en los diagramas para diferenciar las acciones exigidas por las sentencias originales del **IFTS 16** frente a las decisiones de diseño del **Grupo 31 (IFTS 29)**.
-3. **Segunda y tercera revisión — Síntesis de lectura y claridad visual (pedidos directos tras probar la página):**
-   - **Problema detectado:** la primera versión tenía bloques duplicados, fórmulas lógicas visibles y exceso de texto que mareaba la lectura inicial en pantalla.
-   - **Pedido de mejora al agente:** reducir drásticamente la cantidad de texto en la vista principal, hacer el diseño más amable y lograr que cada flujo se entienda en segundos.
-   - **Qué cambió y por qué mejoró:** se simplificó toda la landing a **3 bloques claros** (Presentación de **AutoMail AI**, **Solución 1 · R3** y **Solución 2 · R4**); se rediseñaron los dos diagramas con pasos breves, iconos claros y bifurcación directa en **2 caminos (`SÍ` / `NO`)**; y se trasladaron las herramientas detalladas, excepciones y ejemplos de prueba adentro de los **desplegables** (`<details>`), cumpliendo exactamente el criterio de la consigna (*«Los desplegables permiten conocer los detalles sin recargar la lectura»*).
+| **1 · R3** | Correo marcado como spam → Revisión, sin borrar ni responder ✅ | Correo legítimo → pasa al Flujo 2 (decisión del grupo) ✅ |
+| **2 · R4** | Reclamo → derivado a persona, sin respuesta automática ✅ | Consulta frecuente sin alertas → respuesta aprobada (decisión del grupo) ✅ |
 
 ---
 
-## 5. Cómo reproducir y probar el proyecto localmente
+## 7. Cómo ejecutarlo localmente
 
-El proyecto no requiere `Node.js`, gestores de paquetes ni compilación previa:
+No necesita instalación ni compilación.
 
-1. Clonar o descargar este repositorio:
-   ```bash
-   git clone https://github.com/GRUPO-31/TP3.git
-   cd TP3
-   ```
-2. Abrir el archivo `index.html` directamente en cualquier navegador moderno de escritorio (Chrome, Edge, Firefox), o bien levantar un servidor estático local opcional:
-   ```bash
-   python -m http.server 8080
-   ```
-   y visitar `http://localhost:8080` en resolución de escritorio.
-3. **Pruebas recomendadas:**
-   - Comprobar que el logo de **AutoMail AI** se vea íntegro en la tarjeta inicial.
-   - Usar los botones del **Probador visual de recorrido** en la Propuesta 1 (`R3`) y en la Propuesta 2 (`R4`) para contrastar el camino `SÍ`, el camino `NO` y el `Caso límite`.
-   - Navegar con la tecla `Tab` hasta cualquier desplegable (`<summary>`) y presionar `Enter` o `Espacio` para verificar su apertura y cierre por teclado.
+```bash
+git clone https://github.com/GRUPO-31/TP3.git
+cd TP3
+python -m http.server 8080
+```
+
+Abrir `http://localhost:8080` en un navegador de escritorio (también funciona abriendo `index.html` directamente).
 
 ---
 
-## 6. Estructura de archivos
+## 8. Estructura de archivos
 
 ```text
-tp3-automail-ai/
+TP3/
 ├── assets/
-│   └── automail-logo.webp   # Logo original oficial asignado (Sorteo S10-B · IFTS 16)
-├── index.html               # Estructura semántica, presentación, 2 diagramas y desplegables
-├── styles.css               # Diseño visual desktop, paleta AutoMail AI y estados accesibles
-├── script.js                # Probador estático de caminos, control de desplegables y navegación
-└── README.md                # Documentación de integrantes, lógica, herramientas IA e iteración
+│   └── automail-logo.webp   # Logo original de AutoMail AI
+├── index.html               # Presentación, sentencias, dos diagramas y desplegables
+├── styles.css               # Estilos para desktop
+├── script.js                # Resaltado de caminos SÍ/NO, navegación activa e impresión
+└── README.md
 ```
