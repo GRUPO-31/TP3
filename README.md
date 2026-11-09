@@ -14,9 +14,9 @@
 | | Enlace |
 | :--- | :--- |
 | **Repositorio** | https://github.com/GRUPO-31/TP3 |
-| **Landing publicada** | https://grupo-31.github.io/TP3/ |
+| **Landing publicada** | https://tp3-grupo-31-2-a.vercel.app/ |
 
-> La landing se publica con **GitHub Pages** (Settings → Pages → Branch `main` / carpeta `/ (root)`).
+> La landing se publica en **Vercel**.
 
 ### Comprobación de enlaces sin sesión (ventana de incógnito)
 - [ ] El repositorio abre sin iniciar sesión.
